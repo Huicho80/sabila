@@ -1,0 +1,62 @@
+*{
+    background: #ff0000;
+   }
+
+
+   .nombredeclase{
+    background: #ff0000;
+   }
+
+   #nombredelid{
+    background: #ff0000;
+   }
+   
+
+   p{
+    background: #ff0000;
+   }
+
+   
+
+   #holax{
+    background: #ff0000;
+    text-align: left;
+   }
+   
+   #rec1{
+    border-radius: 20px;
+    background-color: #ddd;
+    width: 200px;
+    padding: 10px;
+   }
+   #rec2{
+    border-radius: 20px;
+    background-color: #aa0;
+    width: 200px;
+    padding: 10px;
+    margin-top: 10pc;
+   }
+   .pregunta {
+    background-color: yellow;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    }
+    .respuesta {
+     border-width: 1px;
+     border-style: dashed;
+     border-color: black;
+    }
+    
+
+    #titulo1 {
+        text-shadow: 5px 5px 5px #aaa;
+       }
+       #titulo2 {
+        text-shadow: 5px 5px 5px #aaa;
+       }
+       #titulo3 {
+        text-shadow: 3px 3px 5px #f00,
+        6px 6px 5px #0f0,
+        9px 9px 5px #00f,
+       }

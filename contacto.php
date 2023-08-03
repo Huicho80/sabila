@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <?php 
+header("Content-Type: text/html;charset=utf8");
+    session_start();
+if(isset($_SESSION['u_usuario'])){
+
+    include("conexion.php");
+     
+   
+ 
+                                }
+
+else{
+   header("Location: index.html");
+}
+?>
+ <title>Aloe Vera 100% Orgánica</title>
+ <link rel="shortcut icon" href="img/logo.jpg">
+ <link href="https://fonts.googleapis.com/CSS?family=Montserrat:400,700" rel="stylesheet
+" type="text/CSS">
+ <link href="https://fonts.googleapis.com/CSS?family=Lato:400,700,400italic,700italic" r
+el="stylesheet" type="text/CSS">
+ <link href="CSS/freelancer.min.CSS" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body background="img/green.jpeg" bgcolor="FFCECB">>
+    
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Bienvenido <?php echo $_SESSION['u_usuario']?></a>
+        <div class="container">
+        <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menú
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+    <ul class="navbar-nav ml-auto">
+    <li class="nav-item mx-0 mx-lg-1">
+    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="producto.php">Producto</a>
+    <li class="nav-item mx-0 mx-lg-1">
+      <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="inicio.php">Inicio</a>
+      </li>
+      <li class="nav-item mx-0 mx-lg-1">
+    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html">Salir</a>
+    </li>
+    <br>
+    </li>
+    </ul>
+    </div>
+    </div>
+    </nav>   
+    <header >
+        </header>
+   
+<section class="page-section" id="contact">
+    <div class="container">
+        <br> <br>
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contáctanos</h2>
+       <form action="registrar.php" method="POST">
+      
+       
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <form action="" class="formulario" id="formulario">
+               <br>
+                  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="validationDefault01">Nombre</label>
+      <input type="text" class="form-control" id="validationDefault01" placeholder="Nombre" required min ="4" && maxlength="45" name="nombre">
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationDefault02">Apellido Paterno</label>
+      <input type="text" class="form-control" id="validationDefault02" placeholder="Apellido Paterno" required min ="4" && maxlength="45" name="paterno" >
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationDefault02">Apellido Materno</label>
+      <input type="text" class="form-control" id="validationDefault02" placeholder="Apellido Materno" required min ="4" && maxlength="45" name="materno">
+    </div>
+     </div>
+  <div class="form-row">
+    <div class="col-md-2 mb-3">
+      <label for="validationDefault03">Edad</label>
+      <input type="text" class="form-control" id="validationDefault03" pattern="[0-9]{2}" placeholder="Edad" required>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="validationDefault04">Correo electrónico</label>
+      <input type="email" class="form-control" id="validationDefault04" name="email"  placeholder="Email" required>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationDefault05">Telefóno</label>
+      <input type="text" class="form-control" name="telefono" pattern="[0-9]{10}" placeholder="Número 10 digitos" required>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+      <label class="form-check-label" for="invalidCheck2">
+        Acepto terminos y condiciones.
+      </label>
+    </div>
+  </div>
+  <button class="btn btn-primary" type="submit">Enviar</button>
+  <button class="btn btn-primary" type="reset">Resetear</button>
+ 
+                                    </form>
+
+                                </div>
+                                </div>
+           
+            <button class="btn btn-primary chat-btn" id="chatButton">
+  <i class="fas fa-comments"></i> Abrir Chat
+</button>
+
+        </div>
+    </section>
+
+  
+
+    <script>
+  var popup = null;
+  var isOpen = false;
+
+  // Evento para abrir la página como ventana emergente al hacer clic en el botón
+  document.getElementById("chatButton").addEventListener("click", function() {
+    // Verificar si la ventana emergente ya está abierta
+    if (isOpen) {
+      alert("La ventana del chat ya está abierta.");
+      return;
+    }
+
+    var popupWidth = 700;
+    var popupHeight = 900;
+    var popupLeft = (window.screen.availWidth - popupWidth) / 2; // Posición horizontal centrada
+    var popupTop = 0; // Posición inicial de la ventana emergente en la parte superior de la pantalla
+    popup = window.open("", "_blank", "width=" + popupWidth + ",height=" + popupHeight + ",left=" + popupLeft + ",top=" + popupTop);
+    var currentY = window.screen.availHeight;
+
+    // Mueve la ventana emergente hacia arriba en incrementos hasta que alcance la posición final
+    var interval = setInterval(function() {
+      currentY -= 20;
+      popup.moveTo(popupLeft, currentY);
+      if (currentY <= (window.screen.availHeight - popupHeight)) {
+        clearInterval(interval);
+        // Carga la página en la ventana emergente una vez que la animación haya finalizado
+        popup.location.href = "chatear.php";
+        isOpen = true;
+      }
+    }, 10);
+  });
+
+  // Evento para restablecer el estado de la ventana emergente cuando se cierra
+  window.addEventListener("beforeunload", function() {
+    if (popup && popup.closed) {
+      popup = null;
+      isOpen = false;
+      document.getElementById("chatButton").disabled = false; // Habilita el botón
+    }
+  });
+</script>
+
+
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <h4 class="text-uppercase mb-4">Desarrollador</h4>
+                    <p class="lead mb-0">José Luis García Serrano.
+                        <a href="http://unideh.edu.mx" style="color:#131212;">UNIDEH</a>.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <section class="copyright py-4 text-center text-white">
+        <div class="container">
+            <small>UNIDEH 2023</small>
+        </div>
+    </section>
+
+</body>
+
+</html>
